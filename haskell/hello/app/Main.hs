@@ -7,4 +7,4 @@ main = do
     putStrLn displayPrompt
     name <- getLine
     let output = greeting name
-    print output
+    putStrLn output
