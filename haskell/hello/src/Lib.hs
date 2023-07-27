@@ -1,11 +1,14 @@
+{-# LANGUAGE OverloadedStrings #-}
 module Lib
     ( displayPrompt,
       greeting
     ) where
 
-displayPrompt :: String
+import qualified Data.Text as T
+
+displayPrompt :: T.Text
 displayPrompt = "What is your name?"
 
-greeting :: String -> String
+greeting :: T.Text -> T.Text
 greeting "Matt" = "Hello! Matt We have the same name!"
 greeting name = mconcat [ "Hello, ", name, ", nice to meet you!" ]
